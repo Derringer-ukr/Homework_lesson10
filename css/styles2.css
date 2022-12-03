@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-text-color: #3C3C3C;
+    --secondary-text-color: #282528;
+    --accent-color: #18B5DC;
+    --description-text-color: #646464;
+    --background: #F6F6F6;
+    --divider: #DDDBDB;
+    --accent-background: #FFFFFF;
+
+}
+
+body {
+    color: var(--primary-text-color);
+    background-color: var(--primary-white-color);
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    min-width: 1440px;
+   
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+/* почему ссылка, в которую обернуто лого, имеет высоту 63 пикселя, если  высота лого - 60 пикселей? */
+
+.header {
+    border: 1px solid #ECECEC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 136px 10px 135px;
+    box-sizing: border-box;   
+}
+
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__list-header {
+    margin: 0 246px 0 206px;
+}
+
+.nav__list-item {
+    margin-right: 30px;
+}
+
+.nav__list-item:last-child {
+    margin-right: 0;
+}
+
+.nav__list-link {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav__list-link:hover {
+    color: var(--accent-color);
+}
+
+.nav__list-link-header {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* почему-то контентная часть кнопки вышла на пару пикселей шире, чем на макете 
+Также почему-то не наследуется шрифт с боди, приходится его вписывать дополнительно в стили кнопки*/
+
+.header__button {
+    color: var(--primary-text-color);
+    font-family: 'Lato', sans-serif;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-text-color);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    background: none;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.header__button:hover {
+    color: var(--accent-background);
+    background-color: var(--accent-color);
+}
+
+main {
+    background-color: var(--background);
+    padding: 150px 135px;
+}
+
+.main__team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team__specialists-list {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.team__specialists-member {
+    margin-right: 30px;
+}
+
+.team__specialists-member:last-child {
+    margin-right: 0;
+}
+
+.team__title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.team-divider {
+    width: 45px;
+    height: 4px;
+    background: var(--divider);
+    margin-bottom: 40px;
+}
+
+.team__subtitle {
+    width: 570px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+
+.team__specialists-member-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--secondary-text-color);
+}
+
+.team__specialists-member-position {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--description-text-color);
+}
+
+
+
+.team__specialists-card {
+     position: relative;
+     display: inline-block;
+     margin-bottom: 20px;
+ }
+
+.team__specialists-photo {
+     vertical-align: middle;
+ }
+
+.team__specialists-overlay {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background: var(--accent-color);
+     opacity: 0;
+     transition: opacity .3s;
+     
+}
+
+ .team__specialists-card:hover .team__specialists-overlay {
+     opacity: 1;
+ }
+
+  .team__specialists-overlay-links {
+      padding: 114px 68px;
+  }
+
+.socials-item__link {
+    display: inline-block;
+
+}
+
+.socials-item__link:hover svg {
+    opacity: 0;
+}
+
+  .team__twitter:hover {
+      background: url(../images2/twitter4.svg) no-repeat;   
+  }
+
+  .team__facebook:hover {
+      background: url(../images2/facebook4.svg) no-repeat;
+  }
+
+  .team__instagram:hover {
+      background: url(../images2/instagram4.svg) no-repeat;
+  }
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 528px 40px 528px;
+    box-sizing: border-box;
+}
+
+.footer__logo {
+    margin-bottom: 28px;
+}
+
+.nav__list-link-footer {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.footer__nav {
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__socials-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__socials-item {
+    margin-right: 10px;
+}
+
+.footer__socials-item:last-child {
+    margin-right: 0;
+}
+
+
+.footer__twitter:hover {
+    background: url(../images2/twitter1.svg) no-repeat;
+}
+.footer__facebook:hover {
+    background: url(../images2/facebook1.svg) no-repeat;
+}
+.footer__instagram:hover {
+    background: url(../images2/instagram1.svg) no-repeat;
+}
+.footer__linkedin:hover {
+    background: url(../images2/linkedin1.svg) no-repeat;
+}
+.footer__telegram:hover {
+    background: url(../images2/telegram1.svg) no-repeat;
+}
+
+
+
+
+/* .menu-navigation, .contacts {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+
+}
+.menu-navigation {
+    margin-left: 93px;
+    display: flex;
+}
+
+header li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.contacts {
+    color: var(--description-text-color);
+    
+}
+
+header .contacts {
+    margin-left: 281px;
+}
+
+.contacts li {
+    display: inline-block;
+    text-align: center;
+
+}
+
+.contacts-item {
+    color: var(--description-text-color);
+}
+
+.header a:hover {
+    color: var(--accent-color);
+}
+
+.header a:focus {
+    color: var(--accent-color);
+} */
+/* main */
+
+/* .about {
+    padding: 94px 215px;
+    
+}
+
+.about h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.specialty {
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    color: var(--description-text-color);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.about h3,.about p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;  
+}
+
+.about h3 {
+    margin-top: 30px;
+    
+}
+
+.about p {
+    margin-top: 10px;
+}
+.team__specialists-list {
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    
+}
+.specialists {
+    background-color: #F5F4FA;
+}
+
+.team li {
+    width: 270px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team p {
+    font-weight: 400;
+    margin-bottom: 30px;
+      
+}
+
+footer {
+    background-color: #2F303A;
+    position: absolute;
+    width: 1600px;
+    height: 252px;
+}
+
+.footer-studio {
+    padding: 60px 214px;
+}
+
+footer .header-logo-part {
+    color: var(--primary-white-color);
+}
+
+footer p {
+    color: var(--primary-white-color);  
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    
+}
+
+footer a,
+footer p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+} */
+
+/* portfolio
+
+.menu-navigation a.current {
+    color: var(--accent-color);
+}
+
+.portfolio-hero {
+    padding: 94px 215px;
+}
+.portfolio-hero button {
+    color: #212121;
+    background: #F5F4FA;
+    border-radius: 4px;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+}
+
+.portfolio-hero button:hover {
+    color: #FFFFFF;
+    background: #2196F3;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    
+}
+
+
+.portfolio-examples {
+   display: block;
+   
+}
+
+.portfolio-examples li {
+    display: inline-block;
+    width: 33.3%;
+}
+
+.portfolio-example
+
+.portfolio-hero h1 {
+    display: none;
+}
+
+.portfolio-hero h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.portfolio-hero p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+} */
